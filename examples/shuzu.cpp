@@ -3,10 +3,32 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-
+#include <string.h>
 
 using namespace std;
 
+// 双指针，解决字符串逆序的问题
+void Reverse(char arr[], int size) {
+	char* p = arr;
+	char* q = arr + size - 1;
+	while (p < q) {
+		*p = *p ^ *q;
+		*q = *p ^ *q;
+		*p = *p ^ *q;
+		p++;
+		q--;
+	}
+}
+
+void main() {
+	char arr[] = "hello, world!";
+	Reverse(arr, strlen(arr));
+	cout << arr << endl;
+}
+
+
+
+#if 0
 class Array {
 public:
 	Array(int size = 10) : mCur(0), mCap_(size) {
@@ -110,4 +132,6 @@ int main(void) {
 	arr.show();
 	
 }
+#endif
+
 
