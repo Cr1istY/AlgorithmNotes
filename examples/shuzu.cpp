@@ -20,10 +20,49 @@ void Reverse(char arr[], int size) {
 	}
 }
 
+// 奇偶调整问题，把奇数放在右边，把偶数放在左边
+void AdjustArray(int arr[], int size) {
+	int* p = arr;
+	int* q = arr + size - 1;
+	while (p < q) {
+
+		if ((*p & 0x01) == 0) {
+			p++;
+			continue;
+		}
+
+		if ((*q & 0x01) == 1) {
+			q--;
+			continue;
+		}
+
+		*q = *q ^ *p;
+		*p = *q ^ *p;
+		*q = *q ^ *p;
+		p++;
+		q--;
+
+	}
+}
+
+
 void main() {
-	char arr[] = "hello, world!";
-	Reverse(arr, strlen(arr));
-	cout << arr << endl;
+	int arr[10] = { 0 };
+	srand(time(0));
+	for (int i = 0; i < 10; i++) {
+		arr[i] = rand() % 100;
+	}
+
+	for (int v : arr) {
+		cout << v << " ";
+	}
+	cout << endl;
+	AdjustArray(arr, 10);
+
+	for (int v : arr) {
+		cout << v << " ";
+	}
+	cout << endl;
 }
 
 

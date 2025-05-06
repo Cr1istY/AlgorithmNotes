@@ -24,4 +24,16 @@
 
 一前一后两个指针，一个指针从前往后，一个指针从后往前
 
-
+```cpp
+void Reverse(char arr[], int size) {
+    char* p = arr;
+    char* q = arr + size - 1;
+    while (p < q) {
+        *p = *p ^ *q;
+        *q = *p ^ *q;
+        *p = *p ^ *q;
+        p++;
+        q--;
+    }
+}
+```
