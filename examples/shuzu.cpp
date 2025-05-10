@@ -45,7 +45,7 @@ void AdjustArray(int arr[], int size) {
 	}
 }
 
-
+#if False
 void main() {
 	int arr[10] = { 0 };
 	srand(time(0));
@@ -64,7 +64,7 @@ void main() {
 	}
 	cout << endl;
 }
-
+#endif
 
 
 #if 0

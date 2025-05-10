@@ -130,6 +130,7 @@
     <None Include="cpp_data.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\examples\linklist.cpp" />
     <ClCompile Include="..\examples\shuzu.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
