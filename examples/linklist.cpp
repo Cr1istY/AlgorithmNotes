@@ -34,7 +34,6 @@ public:
 
 		Node* node = new Node(val);
 		p ->next_ = node;
-		return;
 	}
 
 	// 头插法
@@ -43,7 +42,6 @@ public:
 		Node* p = head_->next_;
 		head_->next_ = node;
 		node->next_ = p;
-		return;
 	}
 
 	// 链表打印
@@ -57,7 +55,6 @@ public:
 			cout << "the linkList in empty!";
 		}
 
-		return;
 	}
 
 	// 按值删除链表的节点
@@ -80,7 +77,6 @@ public:
 	void removeAllNode(int val) {
 		while (deleteNode(val)) {
 		}
-		return;
 	}
 
 	void searchNode(int val) {
@@ -93,7 +89,6 @@ public:
 			locate++;
 			q = q->next_;
 		}
-		return;
 	}
 
 
@@ -102,7 +97,7 @@ private:
 
 };
 
-int main(void) {
+int main() {
 	Clink link;
 	srand(time(0));
 	for (int i = 0; i < 10; i++) {
