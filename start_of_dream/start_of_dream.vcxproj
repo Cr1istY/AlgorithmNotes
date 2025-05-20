@@ -130,6 +130,7 @@
     <None Include="cpp_data.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\books_examples\suanfa\1_1_10.cpp" />
     <ClCompile Include="..\examples\linklist.cpp" />
     <ClCompile Include="..\examples\shuzu.cpp" />
   </ItemGroup>

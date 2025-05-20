@@ -26,5 +26,8 @@
     <ClCompile Include="..\examples\linklist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\books_examples\suanfa\1_1_10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

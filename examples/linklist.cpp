@@ -97,6 +97,8 @@ private:
 
 };
 
+#if 0
+
 int main() {
 	Clink link;
 	srand(time(0));
@@ -123,4 +125,6 @@ int main() {
 	
 	return 0;
 }
+
+#endif
 
