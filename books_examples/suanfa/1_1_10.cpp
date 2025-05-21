@@ -11,19 +11,19 @@ class BinarySearch {
 */
 public:
 	int search(int arr[], int i, int size) {
-		int max = size;
+		int max = size - 1;
 		int min = 0;
 		int mid = (max + min) / 2;
-		while (max - min != 1) {
+		while (max >= min) {
 			if (arr[mid] == i) {
 				return mid;
 			}
 			else if (arr[mid] < i) {
-				min = mid;
+				min = mid + 1;
 				mid = (max + min) / 2;
 			}
 			else if (arr[mid] > i) {
-				max = mid;
+				max = mid - 1;
 				mid = (max + min) / 2;
 			}
 		}
@@ -34,6 +34,8 @@ public:
 
 };
 
+
+#if 0
 int main() {
 	BinarySearch bs;
 	int arr[10];
@@ -51,5 +53,5 @@ int main() {
 
 	return 0;
 }
-
+#endif
 
