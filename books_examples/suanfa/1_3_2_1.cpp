@@ -58,7 +58,7 @@ public:
 	}
 };
 
-#if 1
+#if 0
 
 int main() {
 	EasyStack<int> es(5);
@@ -76,7 +76,6 @@ int main() {
 	cout << es.isEmpty() << endl;
 	
 }
-
 
 #endif
 
